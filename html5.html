@@ -1,0 +1,1295 @@
+<!-- 
+HTML is the universal markup language for the Web. HTML lets you format text, add graphics, create links, input forms, frames and tables,
+ etc., and save it all in a text file that any browser can read and display 
+-->
+
+<!-- 
+	<!DOCTYPE html>.
+	All HTML documents must start with a document type declaration: <!DOCTYPE html>.
+    declaration represents the document type, and helps browsers to display web pages correctly.
+    declaration is not case sensitive.
+-->
+<!DOCTYPE html>
+<!-- 
+	You should always include the lang attribute inside the <html> tag,
+	 to declare the language of the Web page. 
+	 This is meant to assist search engines and browsers. 
+	 <html lang="en">   specifies English as the language
+     <html lang="en-US">  specifies English as the language and United States as the country
+-->
+<html> <!--	 Defines the root of an HTML documen t-->
+<head>
+<!-- 
+	<meta> tag defines metadata about an HTML document.
+     Metadata is data (information) about data.
+     بتبقى جو ال head
+	  is typically used to specify the character set, page description, keywords, 
+	  author of the document, and viewport settings.
+    will not be displayed on the page is used by browsers (how to display content or reload page)
+    , by search engines (keywords), and other web services. 
+    -->
+	<!-- 
+		To ensure proper interpretation and correct search engine indexing, 
+		both the language and the character encoding <meta charset="charset"> 
+		should be defined as early as possible in an HTML document: 
+	-->
+	<meta charset="utf-8" />
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<meta name="description" content="Free Web tutorials">
+	<meta name="author" content="John Doe">
+
+	<!-- Refresh document every 30 seconds: -->
+	<meta http-equiv="refresh" content="30">
+
+	<!-- 
+		Setting the viewport to make your website look good on all devices
+		The width=device-width part sets the width of the page to follow the screen-width 
+		of the device (which will vary depending on the device).
+		The initial-scale=1.0 part sets the initial zoom level when the page is first 
+		loaded by the browser.
+
+	-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- 
+		CSS can be added to HTML documents in 3 ways: 
+	    Inline - by using the style attribute inside HTML elements
+        Internal - by using a <style> element in the <head> section
+        External - by using a <link> element to link to an external CSS file
+		---
+		Use simple syntax for linking to style sheets (the type attribute is not necessary):
+        <link rel="stylesheet" href="styles.css">
+	-->
+	<link rel="stylesheet" href="ss.css" />
+
+	<!--  
+	 <base> element specifies the base URL and/or target for all relative URLs in a page.
+	 <base> tag must have either an href or a target attribute present, or both.
+     There can only be one single <base> element in a document!
+ -->
+	<base href="https://www.w3schools.com/" target="_blank">
+
+</head>
+<body>  <!-- Defines the document's body -->
+
+<!-- element defines bold text, without any extra importance. -->
+    <b>This text is bold</b>
+
+<!--element defines text with strong importance. The content inside is typically displayed in bold -->
+	<strong>This text is important!</strong>
+
+<!--element defines a part of text in an alternate voice or mood Italic text -->
+	<i>This text is italic</i>
+
+<!--Emphasized text كتابة بارزة displayed in italic. -->
+	<em>This text is emphasized</em>
+
+<!-- defines text that should be marked or highlighted بتلون التكست اللى جوها باللون الاصفر-->
+	<p>Do not forget to buy <mark>milk</mark> today.</p>
+
+<!--Smaller text -->
+	<small>This is some smaller text.</small> 
+
+<!-- Deleted text  خط على الكلمة -->
+	<del>blue</del> 
+
+<!-- خط على الكلمة  Mark up text that is no longer correct-->
+	<s>bbbbbbbb</s> 
+
+<!-- خط تحت الكلمة -->
+	<u>mmmmm</u> 
+
+<!--  Inserted text خط تحت الكلمة -->
+	<ins>red</ins>
+
+<!-- <sub> - Subscript text بتعرض الكلمة تحت شوية عن الكلام -->
+	<p>This is <sub>subscripted</sub> text.</p>
+
+<!-- <sup> - Superscript text بتعرض الكلمة فوق شوية عن الكلام -->
+	<p>This is <sup>superscripted</sup> text.</p>
+
+	<!-- 
+		 <object> 
+			 tag defines a container for an external resource.
+            The external resource can be a web page, a picture, a media player, 
+			or a plug-in application.
+			element is supported by all browsers. 
+		 element defines an embedded object within an HTML document.
+		 can also be used to include HTML in HTML:
+		 <object width="100%" height="500px" data="snippet.html"></object>
+	-->
+	<object data="horse.wav">
+		<!-- 
+			<param> tag is used to define parameters for an <object> element. 
+				Default CSS Settings
+           param {
+           display: none;
+           }
+		-->
+		<param name="autoplay" value="true">
+	</object>
+
+<!-- <cite> tag defines the title of a creative work e.g. a book, a poem, a song,  -->
+<!--<blockquote> defines a section that is quoted from another source.   -->
+	<blockquote cite="http://www.worldwildlife.org/who/index.html">
+		For 50 years, WWF has been protecting the future of nature. 
+		The world's leading conservation organization, WWF works in 100 
+		countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+	</blockquote>
+
+<!-- <q> tag defines a short quotation. -->
+	<q>Build a future where people live in harmony with nature.</q>
+
+<!--
+	 defines an abbreviation or an acronym, like "HTML", "Mr." 
+	Marking abbreviations can give useful information to browsers,
+	 translation systems and search-engines.
+	بيحط خط منقط تحت الكلمة 
+-->
+<abbr title="World Health Organization">WHO</abbr>
+
+<!-- 
+The target attribute can have one of the following values:
+Specifies where to display the response that is received after submitting the form
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window 
+-->
+<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+
+<!--
+Use the mailto: scheme inside the href attribute to create a link that opens the user's email program
+-->
+<a href="mailto:maisabek01@gmail.com">Send email</a>
+
+<!-- 
+Defines a container for multiple image resources 
+صورة بتتغير عند كل شاشة فى شاشة الموبايل غير شاشة اللاب
+element allows you to display different pictures for different devices or screen sizes.
+The <picture> element contains one or more <source> elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view and/or device.
+Each <source> element has a media attribute that defines when the image is the most suitable
+The browser will use the first <source> element with matching attribute values, and ignore any following <source> elements.
+-->
+<picture>
+	<source media="(min-width:650px)" srcset="11.jpg">
+	<source media="(min-width:465px)" srcset="04.jpg">
+	<img src="img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+</picture>
+
+
+<!-- 
+<code> element  is used to define a piece of computer code 
+Notice that the <code> element does not preserve extra whitespace and line-breaks.
+To fix this, you can put the <code> element inside a <pre> element:
+	The <pre> element defines preformatted text
+<pre>
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+</pre>
+-->
+<code>
+	x = 5;
+	y = 6;
+	z = x + y;
+</code>
+
+<!-- 
+	The <output> element represents the result of a calculation (like one performed by a script). 
+-->
+<form action="/action_page.php"
+oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range" id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+
+<!--
+Differences Between .htm and .html?
+There is no difference between the .htm and .html file extensions!
+Both will be treated as HTML by any web browser and web server.
+_______
+HTML allows mixing uppercase and lowercase letters in element names.
+However, we recommend using lowercase element names, because:
+Mixing uppercase and lowercase names looks bad
+Developers normally use lowercase names
+Lowercase looks cleaner
+Lowercase is easier to write
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+<a HREF="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+________
+HTML allows attribute values without quotes.
+<table class="striped">
+<table class=striped>
+________
+HTML allows spaces around equal signs. But space-less is easier to read and groups entities better together.
+<link rel="stylesheet" href="styles.css">
+<link rel = "stylesheet" href = "styles.css">
+__________
+The <section> element defines a section in a document.
+________
+<article> element can be used:
+Forum post
+Blog post
+Newspaper article
+____________
+<header> element represents a container for introductory content 
+or a set of navigational links.
+____________
+<header> element typically contains: one or more heading elements (<h1> - <h6>)
+logo or icon - authorship information
+___________
+<footer> element defines a footer for a document or section.
+element typically contains:
+authorship information
+copyright information
+contact information
+sitemap
+back to top links
+related documents
+___________
+<nav> element defines a set of navigation links.
+__________
+<aside> element defines some content aside from the content it is placed in 
+____________
+HTML Layout Techniques
+CSS framework
+CSS float property
+CSS flexbox
+CSS grid
+________
+The text size can be set with a "vw" unit
+<h1 style="font-size:10vw">Hello World</h1>
+______________
+<div> element is a block-level and is often used as a container for other HTML elements
+<span> element is an inline container used to mark up a part of a text, or a part of a document
+____
+
+rgb
+a color can be specified as an RGB value, using this formula:
+rgb(red, green, blue)
+_____
+HEX Color
+can be specified using a hexadecimal value in the form:
+background-color:#404040;
+____
+HSL Color
+can be specified using hue, saturation, and lightness (HSL) in the form
+hue ==> درجة اللون
+saturation ==>صفاء اللون 
+lightness ==>إضاءة
+background-color:hsl(0, 100%, 50%)
+_____________________________
+
+The title attribute defines some extra information about an element.
+<p title="I'm a tooltip">This is a paragraph.</p>
+
+____________________________
+all other attributes) can be written with uppercase or lowercase like title or TITLE.
+______________________________
+The HTML standard does not require quotes around attribute values.
+<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>   good
+<a href=https://www.w3schools.com/html/>Visit our HTML tutorial</a>     bad
+
+Sometimes you have to use quotes. 
+This example will not display the title attribute correctly,
+ because it contains a space:
+<p title=About W3Schools>
+_____________________________
+The <hr> tag defines a thematic break in an HTML page,
+ and is most often displayed as a horizontal rule.
+
+The <hr> element is used to separate content (or define a change) in an HTML page
+_______________________________________
+There are two ways to specify the URL in the src attribute:
+1. Absolute URL - Links to an external image that is hosted on another website. 
+Example: src="https://www.w3schools.com/images/img_girl.jpg".
+
+Notes: External images might be under copyright. 
+If you do not get permission to use it, you may be in violation of copyright laws.
+In addition, you cannot control external images; it can suddenly be removed or changed.
+
+2. Relative URL - Links to an image that is hosted within the website. 
+Here, the URL does not include the domain name. If the URL begins without a slash,
+ it will be relative to the current page. Example: src="img_girl.jpg". 
+ If the URL begins with a slash, it will be relative to the domain. 
+ Example: src="/images/img_girl.jpg".
+______________________________________________
+The HTML <pre> element defines preformatted text.
+The text inside a <pre> element is displayed in a fixed-width font (usually Courier), 
+	and it preserves both spaces and line breaks:
+<pre>
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre>
+______________________________________________
+	<object> tag defines a container for an external resource.
+		سوء صورة او فديو او صفحة موجودة عندى
+	<object data="pic_trulli.jpg" width="300" height="200"></object>
+_______________________________________________________________
+<map> tag is used to define an image map.
+<area> Defines a clickable area inside an image map
+خريطة الصورة هي صورة بها مناطق قابلة للضغط عليها.
+
+The <area> tag defines an area inside an image map
+alt="Workplace" ==> alternate text for an image if the image for some reason cannot be displayed.
+ <img src="workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+	   <map name="workmap">
+		<area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+		<area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+		<area shape="circle" coords="337,300,44" alt="Cup of coffee" href="coffee.htm">
+       </map>
+
+__________________________________________
+<kbd> tag is used to define keyboard input. The content inside is displayed in the browser's default monospace font.
+	<p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to copy text (Windows).</p>
+____________________________
+<bdo> tag is used to override the current text direction.
+		<bdo dir="rtl">
+This text will go right-to-left.
+</bdo>
+__________________________________	
+The <basefont> tag was used in HTML 4 to specify a 
+default text-color, font-size or font-family for 
+all the text in an HTML document
+___________________________	
+<b> tag specifies bold text
+_________________________
+Plug-ins
+Plug-ins were designed to be used for many different purposes:
+
+To run Java applets
+To run Microsoft ActiveX controls
+To display Flash movies
+To display maps
+To scan for viruses
+To verify a bank id
+______________________
+  <applet> 
+	tag was used in HTML 4 to define an embedded applet (Plug-in)
+	زى ال
+	<video>
+	<audio>
+	<embed> 
+	<object>
+_________________________________
+
+<embed>
+	defines a container for an external resource, 
+	such as a web page, a picture, a media player, or a plug-in application. 
+	
+element is supported in all major browsers.
+element also defines an embedded object within an HTML document.
+Web browsers have supported the <embed> element for a long time.
+However, it has not been a part of the HTML specification before HTML5
+<embed src="audi.jpeg">
+The <embed> element can also be used to include HTML in HTML:
+<embed width="100%" height="500px" src="snippet.html">
+<embed type="video/webm" src="video.mp4" width="400" height="300">
+_______________________
+The <address> tag defines the contact information
+The text in the <address> element usually renders in italic, 
+and browsers will always add a line break before and after the <address> element.
+________________________________________________
+The <code> tag is used to define a piece of computer code
+___________________________________________
+The <colgroup> tag specifies a group of one or more columns in a table for formatting.
+
+<table>
+  <colgroup>
+	specifies column properties for each column
+    <col span="2" style="background-color:red">
+    <col style="background-color:yellow">
+  </colgroup>
+  <tr>
+    <th>ISBN</th>
+    <th>Title</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>3476896</td>
+    <td>My first HTML</td>
+    <td>$53</td>
+  </tr>
+</table>
+
+________________________________________
+<dl> //description list
+  <dt>Coffee</dt> 
+  <dd>Black hot drink</dd>  used to describe a term/name in a description list
+  <dt>Milk</dt>
+  <dd>White cold drink</dd>
+</dl>
+____________________________________
+The <dfn> tag stands for the "definition element"
+_____________________________________
+<dialog> tag defines a dialog box or subwindow
+<dialog open>this dialog</dialog>
+___________________________
+<dir> tag was used in HTML 4 to list directory titles.
+________________________________
+<em> تستخدم لتعريف النص المميز
+Mark up emphasized text in a document:
+ The content inside is typically displayed in italic.
+<p>You <em>have</em> to hurry up!</p>
+Default CSS Settings
+em {
+  font-style: italic;
+}
+________________________________________
+<legend> tag defines a caption for the <fieldset> element.
+
+The <fieldset> tag is used to group related elements in a form.
+
+The <fieldset> tag draws a box around the related elements.
+___________________________________________________
+The <i> tag defines a part of text in an alternate
+The content inside is typically displayed in italic
+________________________________	
+The <optgroup> tag is used to group related options
+
+Use the size attribute to specify the number of visible values:
+
+ <select name="cars" id="cars" size="3" >
+    <optgroup label="Swedish Cars">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+    </optgroup>
+    <optgroup label="German Cars">
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </optgroup>
+  </select>
+___________________________________________
+The <textarea> element defines a multi-line input field (a text area)
+	The rows attribute specifies the visible number of lines in a text area.
+    The cols attribute specifies the visible width of a text area.
+
+<textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+______________
+The <q> tag defines a short quotation.
+	بيحط العلامات دى "" عند النص
+__________________________
+Use <rp> together with <ruby> and <rt>
+
+ <ruby> 
+	tag specifies a ruby annotation.
+		 يتكون العنصر من حرف واحد أو أكثر يحتاج إلى تفسير / نطق
+	 element consists of one or more characters that needs an explanation/pronunciation
+
+rp ==> used to provide parentheses around a ruby text
+to be shown by browsers that do not support ruby annotations.
+ruby يمكن استخدام العلامة لتوفير أقواس حول نص  
+ruby ليتم عرضها بواسطة المتصفحات التي لا تدعم التعليقات التوضيحية .
+
+rt ==> element that gives that information
+ <rt> شرحًا أو نطق الأحرف
+<ruby>
+ <rt>
+	 <rp>(</rp>n<rp>)</rp>
+ </rt>
+</ruby>
+
+____________________________
+The <samp> tag is used to define sample output from a computer program
+<p><samp>File not found.<br>Press F1 to continue</samp></p>
+___________
+The <thead> tag is used to group header content in an HTML table.
+_________________________
+The <tfoot> tag is used to group footer content in an HTML table.
+___________________________________
+Use <template> to hold some content that will be hidden when the page loads
+
+<button onclick="showContent()">Show hidden content</button>
+
+<template>
+  <h2>Flower</h2>
+  <img src="img_white_flower.jpg" width="214" height="204">
+</template>
+
+<script>
+function showContent() {
+  var temp = document.getElementsByTagName("template")[0];
+  var clon = temp.content.cloneNode(true);
+  document.body.appendChild(clon);
+}
+</script>
+_________________________
+The <var> tag is used to defines a variable in 
+programming or in a mathematical expression. 
+The content inside is typically displayed in italic.
+<p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> 
+	is the base, and <var>h</var> is the vertical height.</p>
+________________________
+ان العنصر دة فى طريقهم لتغيرة بعنصر تاانى بنعملها تجااهل
+Deprected
+1-acronym 
+دا موجود فى لغة ولكن لازم اتجاهلة 
+البديل هو 
+abbr
+An acronym or abbreviation should be marked up with the <abbr> tag:
+The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.
+------------------
+2-applet
+بيستخدم مع الجافا ممك احط ملف اديو او ملف بداف
+بستخدم بدالة 
+object
+------------------
+3-baseFont
+بستخدم بدالة
+ملف ال
+css
+-------------------
+4-big
+بستخدم بدالها ال
+span
+--------------------
+5-center
+بستخدم بدالها ال
+ملف ال css
+text-align:center
+--------------------
+6-dir
+بستخدم بدالها ال
+ul او ol
+---------------------
+7-font
+بستخدم بدالها ال
+ملف الcss
+------------------
+8-frameset
+مالهااش باديل
+-----------------
+9-strike
+The <strike> tag was used in HTML 4 to define strikethrough (يتوسطة خط) text.
+What to Use Instead?
+Use the <del> tag to define deleted text:
+Use the <s> tag to mark up text that is no longer correct:
+
+بستخدم بدالها ال
+ملف ال
+css
+text-decoration:line-through;
+بتحط خط على الكلمة
+-----------------
+10-tt
+The <tt> tag was used in HTML 4 to define teletype text.
+What to Use Instead?
+<kbd> element (for keyboard input), the <var> element (for variables), 
+	 the <code> element (for computer code),
+	 the <samp> element (for computer output), or use CSS instead.
+بستخدم بدالها ال
+ملف الcss
+-----------------
+semantics
+الدلالة اللفظية
+حااجة بدل على محتواها زى
+form - section - article - footer
+------------------
+العنااصر الغير معرووفة زى 
+<elzero>
+</elzero>
+اللغة بتعاامل معاة على انة 
+inline
+وليس
+block
+-----------------
+progress 
+مستووى التقدم
+بستخدمة عشاان احدد نسبة معينة وبيااخد حااجتين 
+max - value
+الفاليو دى القيمة اللى واخدها والماكس يعنى واخد القيمة دى من كاام
+-->
+<div>
+design : <progress value="7" max="10"></progress>
+</div>
+
+<!--
+meter
+عداد ممكن يطلع وممكن ينزل
+بيااخد  ال
+max 
+والديقلت 1
+min
+والديفلت زيرو
+value
+القيمة اللى هيااخدة مابين والماكس والمنمم
+low
+عشاان الميتر يتلوون يقولى النسبة حلووة ولا وحشة
+بيقارن القيمة اللى ادتهالو بقيمة اللى مووجودة فى الو وعلى اساسها بيغر لوونة 
+high ==> زى low 
+optimum
+الوضع الامثل
+يعنى امثل قيمة
+<section>
+	cpu:<meter min="0" max="1" value="0.5" low="0.5" high=".8" optimum=".5"></meter>
+</section>
+-->
+<!--
+--------------------
+<elzero><mm>jjjjj</mm></elzero> عنص غير معرووف
+<div>I Love <abbr title="html5">html</abbr>
+-------------------------------
+<details> 
+Defines additional details that the user can view or hide
+لما الشخص يضغط عليها يظهر لاست
+summary
+لو عاايزة اغير اسم الدتيالز
+-->
+<p>
+	<details>
+		<!--اوبن عشااان لما  اجااى افتح الصفحة الاقى الديتاالز مفتووحة-->
+		<summary>details name</summary>
+		<ul>
+			<li>intro</li>
+			<li>api</li>
+			<li><bdi>مى</bdi>ro</li>
+			<li>inro</li>
+		</ul>
+	</details>
+</p>
+<!--
+wbr
+عشاان اعمل براك عند حتة معينة
+-->
+<p>This is a veryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryveryvery
+	<wbr>longwordthatwillbreakatspecific<wbr>placeswhenthebrowserwindowisresized.</p>
+
+<!--
+---------------------
+figure
+عنصر
+self content
+يعنى الكونت بتااعتة منة فية لو شيلتة مش هيااثر لى الصفحة 
+like illustrations, diagrams, photos, code listings
+--
+figcaption
+بتااعى figure الوصف بتااع ال
+
+<figure>
+	<figcaption>this image figure 1-3</figcaption>
+	<img src="C:\Users\Mimo\Desktop\w\f1.JPG" width="150px" padding="3px" background-color="white" />
+</figure>
+-------------
+<time> Defines a date/time
+<p>kkk <time datetime="2014-10-25 20:30">oct ,25th , 2014</time></p>
+
+time
+زى ال 
+span
+بحط جواة الووقت
+-------------
+
+Bdi
+عاايز اكتب جملة عربى جوة الانجليزى 
+-------------
+datalist
+The <datalist> element specifies a list of pre-defined options for an <input> element.
+
+لاست فيها بيانات
+ولازم احط قبلها تيكست فايلد فية اتربيوت اسمة 
+list
+واخد  قيمة
+وداتا لاست فيها 
+id
+واخد نفس قيمة ال
+list
+-->
+<form>
+	<input list="b">
+	<datalist id="b">
+		<option value="ccc">
+		<option value="f">
+		<option value="s">
+		<option value="o">
+	</datalist>
+	<input type="submit">
+</form>
+	<main>
+		<!--حاااجة اسااسية للصفحة ومبتكررش واقدر اكتب جواة اى حااجة-->
+	</main>
+	<div class="post">
+		
+		<article class="d">
+			<form id="mainform" class="html5" action="f.txt" target="_blank" EncType="" method="get">
+				<input type="email" placeholder="type your email">
+				<!--disabled مش بيخلنى اقدر اكتب فى التكيس فيلد   -->
+				<input type="text" name="j" autofocus="on" required>
+				<input type="file" multiple> <!-- هيخلينى اختاار فاايل من مجموعة فايلات موجودة عندى على الجهااز -->
+				<input type="number" name="j" autofocus="on" required min="12" max="20">
+				<input type="text" pattern="[ِِِA-Z]{6}">
+				<input type="text" name="read" value="g" readonly>
+				<input type="text" name="read" value="g" disabled>
+				<input type="reset">
+				<input type="button" onclick="alert('Hello World!')" value="Click Me!">
+				<input type="image" src="04.jpg" alt="Submit" width="48" height="48">
+				<br>
+				<input type="radio" id="female" name="gender" value="female">
+				<label for="female">Female</label><br>
+				<input type="radio" id="other" name="gender" value="other">
+				<label for="other">Other</label>
+				<br>
+				<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+				<label for="vehicle1"> I have a bike</label><br>
+				<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+				<label for="vehicle2"> I have a car</label><br>
+				<br>
+<!-- 
+	The for attribute of the <label> tag should be equal to the id attribute of the 
+		<input> element to bind them together. 
+-->
+<label for="lname">Last name:</label><br>
+<input type="text" id="lname" name="lname">
+
+<!--
+	accept-charset
+	Specifies the character encodings used for form submission
+	<form action="/action_page.php" accept-charset="utf-8">
+     __________
+	   required بيخلنى اقدر اكتب فى التكست فيلد
+	   <input type="text" name="j" required> 
+      -------------------	   
+	  autocomplete="off"
+	  لو انا كتباة مرة قبل كدة فى التكست فيلد وجاات اكتب تاانى اللى انا كاتباة اوول مرة ميظهرش  وانا بكتب تاانى
+	  <input type="text" name="k" autocomplete="off">
+	  When autocomplete is on, the browser automatically complete 
+	  values based on values that the user has entered before.
+	 -----------------
+	  autofocus="on"
+	 specifies that an input field should automatically get focus when the page loads.
+	  اوول لما ادخل على الصفحة يخلى السهم واقف عند التكست فيلد دةاللى مديالوة الخااصية دى
+	  <input type="text" name="j" autofocus="on"> 
+      --------------	 
+      novalidate
+	  The novalidate attribute is a boolean attribute.
+	  When present, it specifies that the form-data (input) should not be validated when submitted.
+	  لو انا  عاااملة تااكست فاليد من نووع ايميل فلازم اليوزر يدخل حاجة  وبعد كدة ات لما بكتب
+	  novalidate
+	  بيخلى اليوزر يدخل عاادى من غير ات
+	  <form novalidate>
+	  ---------------
+	  action
+	  عشاان ابعت البيانات اللى فى الفورم لملف معين 
+	   <form action="اسم الملف">
+	  -----------------
+	   method
+	   1-get    2-post
+	   ------------------
+	   ممكن اعمل اكتر من زرار صبميت فى نفس الصفحة وحدد معاة ال
+	   action  , method
+	    <input type="submit" value="dsubmit">
+		<input type="submit" formaction="" formmethod="">
+		-------------
+		EncType
+		Specifies how the form-data should be encoded 
+		when submitting it to the server (only for method="post")
+		نوع تشفير البيانات اللى ببعتها للسرفير
+		بيشفر البيانات اللى موجودة فى اللينك
+		<form EncType="">
+		------------------
+		rel
+		Specifies the relationship between a linked resource and the current document
+		<form rel="value">
+           الفاليو ممكن تكون
+		   help  ==> Links to a help document
+		   license ==> Links to copyright information for the document
+		   next ==>	The next document in a selection
+		   nofollow	==> Links to an unendorsed document, like a paid link.
+          ("nofollow" is used by Google, to specify that the Google search spider 
+		  should not follow that link)
+        -----
+		لو عملت حقل ادخاال بعد الفوورم يعنى مش جوة الفو ورم وعاايزة اخلية من ضمن الفورم  ادى للفورم 
+		id="mainform"
+		وعند حقل الادخاال اكتب
+		form="mainform"
+		------------------
+        <input type="submit" formnovalidate value="h">		
+		يعنى هيعمل صب ميت حتى لو جاات فى حقل الايميل وكتبتش ات
+		-----------------
+	    <input type="submit" formtarget="_blank" formnovalidate value="hhh">
+		بقولة ابعتلى الفوورم دى وف نفس الووقت تقتح فى صفحة جديدة
+		----------------
+		placeholder
+		مثلا فى التكست فيلد بيكون جوة كلام خفيف زى مثلا 
+		enter your name
+		<input type="email" placeholder="type your email"> 
+		مجرد ما اجى اكتب كلمة 
+		type your email
+		--------------------
+		multiple
+		حااجة هستخدمها مرتين 
+		يعنى مثلا لو ايميل تبقى معناها ان اليوزر هيبعت اكتر من ايميل
+	  <input type="email" placeholder="type your email" multiple>
+	  -------------------
+	  required
+	  يعنى التكست فيلد دة مطلووب مينفعش ابعت الفورم من غيرة
+	  ---------------------
+	  min  -  max
+	  مع حقوول الادخال اللى نامبر
+	  <input type="number" name="j" autofocus="on" required min="12" max="20">
+	  ------------------------ 
+	  step
+	  هيذيد كل مرة بكاااام
+	  <input type="number" name="j" autofocus="on" required min="12" max="20" step="5">
+      ------------------
+	  pattern
+	  search - email - text - url - tel بيتعاامل مع الخمس  حقووول دوول بس اى حقل غيرهم هيتجاهلو 
+	  <input type="text" pattern="[a-z]{6}">
+	  دى معنااها ان الحقل دة يقبل الحروف من اية الى ديد فقط وياخد 6 حرووف بس
+	  ----------------
+	  readonly
+	  file - rediobutton - checkbox - range - color - submit مش بيشتغل مع دووول
+	  اقراء بس اعمل كووبى لكن مقدرش اعدل او حذف
+	  <input type="text" name="read" value="g" readonly>
+	  بتقبل ال
+	  focuce
+	 لما يجى يبعت الفووورم
+	  readonly
+	   بيبعت
+	  ----------------------
+	  disabled
+	  <input type="text" name="read" value="g" disabled>
+	  مقدرش اكتب فية
+	  لما يجى يبعت الفووورم
+	  disabled
+	  مش بيبعت
+      مش بتقبل ال
+	  focuce
+	  ----------------
+	 
+	-->
+	            <input type="submit">
+				<input type="submit" formnovalidate value="h">
+				<!-- 
+				formnovalidate
+				validate ان الانبت دة بس اللى مش لازم يتعاملة  
+				specifies that an <input> element should not be validated when submitted.
+				_________
+				<form action="/action_page.php" novalidate>
+                novalidate specifies that all of the form-data should not be validated when 
+				submitted.
+				-->
+				<input type="submit" formtarget="_blank" formnovalidate value="hhh">
+				<!-- 
+				attribute specifies how the form-data should be encoded when submitted (only for forms with method="post"). 
+				The formenctype attribute works with the following input types: submit and image.
+				-->
+				<input type="submit" formenctype="multipart/form-data">
+				<!-- The input formmethod attribute defines the HTTP method for sending form-data to the action URL. -->
+				<input type="submit" formmethod="post" value="Submit using POST">
+				<!-- 
+					The input formtarget attribute specifies a name or a keyword that 
+					indicates where to display the response that is received after submitting 
+					the form. 
+				-->
+				<input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+			</form>
+			<input type="text" name="j" autofocus="on" form="mainform">
+		</article>
+		<article>
+			<section>
+				<form>
+					<!-- 
+						The input size attribute specifies the visible width, 
+						in characters, of an input field.
+						The default value for size is 20
+						Note: The size attribute works with the following input types:
+						 text, search, tel, url, email, and password.
+                       <input type="text" id="pin" name="pin" size="4">
+					-->
+
+					<input type="color" name="theme"> <!-- زرار بضغط علية واختاار لون من مجموعة الوان-->
+					<input type="range" name="choose" min="0" max="10" step="2" value="1">
+					<input type="number" min="" max="">
+					<input type="email" name="">
+					<input type="search">
+					<input type="time">
+					<input type="url">
+					<!--عشاان اللينك-->
+					<input type="tel" name="telephone" placeholder="kk">
+					<input type="datetime-local">
+					<!-- Enter a date after 2000-01-01: -->
+					<input type="date" min="2000-01-02">
+					<!-- date before 1980-01-01: -->
+					<input type="date" max="1979-12-31">
+					<input type="month">
+					<input type="week">
+					<input type="submit" value="send">
+					<!-- type="hidden" defines a hidden input field (not visible to a user). -->
+					<input type="hidden" id="custId" name="custId" value="3487">
+				</form>
+
+				<video id="video1" controls width="320" width="300" autoplay loop muted poster="C:\Users\Mimo\Desktop\w\f.JPG">
+					<source src="C:\Users\Mimo\Desktop\w\s.avi" type="video/avi">
+					<track src="" kind="" srclang="">
+					your browser dont support video
+				</video>
+
+                <!-- ممكن ابنى ميثود فى الجافا اسكربت عشان اتحكم فى الفديو -->
+				<button onclick="playPause()">Play/Pause</button> 
+				<button onclick="makeBig()">Big</button>
+				<button onclick="makeSmall()">Small</button>
+				<button onclick="makeNormal()">Normal</button>
+<!--
+Add muted after autoplay to let your video start playing automatically (but muted): 
+_____________
+		poster
+		صورة بتفضل مووجودة لحد ما الفديو يشتغل
+		اقدر احط اكتر من source
+		والمتصفح يختاار اللى عاايزة
+		track
+		ترجمة او وصف للفديو
+		1-src
+		الملف اللى فية الترجمة
+		------------
+		2-kind
+		نوع الداتا اية
+		subtitles لما تااخد
+		ترجمة مش فااهم الكلام فبيترجمة
+		caption لما تاخد
+		بيترجم اى حركة
+		----------
+		3-srclang
+		كل لغة ليها srclang
+		ودى بجبها من جوجل اكتب
+		language iso code
+		 ---------
+		 type
+		 زى
+		video/mp4
+		video/webm
+		video/ogg
+
+		-->
+		<!-- عشاان اكتب كوود اتش تى ام ال جوة الصفحة -->
+		&lt;div&gt;gggggggggggggg&lt;/div&gt;
+
+		<!-- 
+			A commonly used entity in HTML is the non-breaking space: &nbsp; 
+		    A non-breaking space is a space that will not break into a new line.
+			Another common use of the non-breaking space is to prevent browsers 
+			from truncating spaces in HTML pages.
+			If you write 10 spaces in your text, the browser will remove 9 of them. 
+			To add real spaces to your text, you can use the &nbsp; character entity.
+		-->
+		<!-- 
+			"  ==>  &quot;
+			'  ==>  &apos;
+			¢  ==>  &cent;
+			&  ==>  &amp;
+			£  ==>  &pound;
+			¥  ==>  &yen;
+			€  ==>  &euro;
+			©  ==>  &copy;
+			®  ==>   &reg;
+		-->
+    
+	   <audio controls autoplay loop muted preload="">
+				<!--
+        عشان احط ريكورد معين		
+		احط فى ال
+		type اية
+		اجى من جوجل وابحث عن 
+		list of mime type
+		وادخل على اوول لينك واشووف امتداد الريكورد وطلع نووعة
+		وبحط controls
+		عشاان يظهر ال
+		audio
+		autoplay
+		دى عشاان اوول لما افتح الصفحة يشتغل لوحدة
+		loop
+		عشاان اوول لما يخلص يكرر لووحدة
+		muted
+		عشاان يكتم الصووت
+		وممكن احط ال
+		source
+		audio مع ال 
+	   بشكل دة
+	    src=""
+		preload
+		نصيحة للمتصفح تقوول للمتصفح اعمل اية 
+		autoلما تااخد
+		اوول لما تفتح الصفحة حمل الريكورد
+		noneلما تااخد
+		متحملش الريكورد
+		metadataلما تااخد
+		بيحمل معلومات عن الاديو وليس الاديو نفسة	
+		-->
+		<source src="" type="">
+		<!-- رسالة بتطلع للمتصفح اللى متصفحة مش بيدعم الاديو   -->
+		don't support
+	</audio>
+				
+<!-- 
+The <frameset> tag was used in HTML 4 to define a frameset.
+
+<frameset cols="">
+<frame src=""></frame>
+<frame src=""></frame>
+<noFrames>gggggggg</noFrames>
+</frameset> 
+What to Use Instead?
+Use the <iframe> tag to embed another document within the current HTML document:
+-->
+
+<!-- 
+	<iframe> tag specifies an inline frame. 
+	An inline frame is used to embed another document within the current HTML document.
+-->
+	<iframe src="url" title="description" height="200" width="300"></iframe>
+
+<!-- 
+	An iframe can be used as the target frame for a link.
+	The target attribute of the link must refer to the name attribute of the iframe: 
+-->
+   <iframe src="demo_iframe.htm" name="iframe_a" title="Iframe Example"></iframe>
+   <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+<!-- 
+	YouTube - Autoplay + Muted 
+	Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).
+-->
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+</iframe>
+<!-- 
+	YouTube Loop 
+Add loop=1 to let your video loop forever.
+
+Value 0 (default): The video will play only once.
+Value 1: The video will loop (forever).
+-->
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
+</iframe>
+
+<!-- 
+	YouTube Controls 
+controls=0 to not display controls in the video player.
+Value 0: Player controls does not display.
+Value 1 (default): Player controls display
+-->
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+</iframe>
+
+	   <ul>
+		<li><data value="21053">Cherry Tomato</data></li>
+		<li><data value="21054">Beef Tomato</data></li>
+		<li><data value="21055">Snack Tomato</data></li>
+	  </ul>
+	   <table>
+		<!-- 
+		 <caption> tag must be inserted immediately after the <table> tag. 
+		-->
+		<caption>Monthly savings</caption>
+		<colgroup>
+		  <col span="2" style="background-color:red">
+		  <col style="background-color:yellow">
+		</colgroup>
+		<tr>
+			<!-- 
+				colspan="2"  
+			  td  هيقسم دى لاتنان يعنى تاخد اتنان من 
+			  attribute to make a cell span many columns
+			-->
+		  <th colspan="2">ISBN</th> 
+		  <th>Title</th>
+		</tr>
+		<tr>
+		  <td>3476896</td>
+		  <td>My first HTML</td>
+		  <td>$53</td>
+		</tr>
+	  </table>
+
+	  <table style="width:100%">
+		<tr>
+	   <!-- Use the CSS border-collapse property to collapse cell borders -->
+		  <th style="border: 1px solid black;border-collapse: collapse;">Name:</th>
+		  <td style="border: 1px solid black;border-collapse: collapse;">Bill Gates</td>
+		</tr>
+		<tr>
+			<!-- 
+				rowspan="2"
+               لاتنان row هيقسم ال 
+			   attribute to make a cell span many rows
+			 -->
+		  <th style="border: 1px solid black;border-collapse: collapse;" rowspan="2">Telephone:</th>
+		  <td style="border: 1px solid black;border-collapse: collapse;">55577854</td>
+		</tr>
+		<tr>
+		  <td>55577855</td>
+		</tr>
+	  </table>
+	  <!-- 
+		The <svg>  defines vector-based graphics in XML format.
+		tag defines a container for SVG graphics.
+	    SVG has several methods for drawing paths, boxes, circles, text, and graphic images. 
+    -->
+	  <!-- SVG Circle -->
+<svg width="100" height="100">
+	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+
+<!-- SVG Rectangle -->
+<svg width="400" height="100">
+	<rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+</svg>
+
+<!-- SVG Rounded Rectangle -->
+<svg width="400" height="180">
+	<rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+	style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+
+<!-- SVG Star -->
+<svg width="300" height="200">
+	<polygon points="100,10 40,198 190,78 10,78 160,198"
+	style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+
+<!-- SVG Logo -->
+<svg height="130" width="500">
+	<defs>
+	  <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+		<stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+		<stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+	  </linearGradient>
+	</defs>
+	<ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+	<text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+	Sorry, your browser does not support inline SVG.
+  </svg>
+
+	  <!-- 
+	  canvas
+	  ارسم اشكاال وبتكوون معتمدة على الجاافا اسكربت
+	  متفاعل كل جزء من الاجزاء الكانفس اقدر اتحكم بيها باستخدام الجافا اسكربيت interactive
+	  element is only a container for graphics. You must use JavaScript to actually draw the graphics. 
+	  -->
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+<img id="scream" src="11.jpg" alt="The Scream" width="220" height="277">
+<p><button onclick="myCanvas()">Try it</button></p>
+<!-- 
+	<script> tag is used to define a client-side script (JavaScript). 
+	Use simple syntax for loading external scripts (the type attribute is not necessary):
+    <script src="myscript.js">
+-->
+<script>
+	document.getElementById("demo").innerHTML = "Hello JavaScript!";
+	document.getElementById("demo").style.fontSize = "25px";
+    document.getElementById("demo").style.color = "red";
+    document.getElementById("demo").style.backgroundColor = "yellow";
+// Draw a Line
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0, 0);
+ctx.lineTo(200, 100);
+ctx.stroke();
+// Draw a Circle
+ctx.beginPath();
+ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+ctx.stroke();
+// Draw a Text
+ctx.font = "30px Arial";
+ctx.fillText("Hello World", 10, 50);
+// Stroke Text
+ctx.font = "30px Arial";
+ctx.strokeText("Hello World", 10, 50);
+// Draw Image
+function myCanvas() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx.drawImage(img,10,10);
+}
+
+// Draw Circular Gradient
+// Create gradient
+var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
+
+
+var myVideo = document.getElementById("video1"); 
+function playPause() { 
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+} 
+
+function makeBig() { 
+    myVideo.width = 560; 
+} 
+
+function makeSmall() { 
+    myVideo.width = 320; 
+} 
+
+function makeNormal() { 
+    myVideo.width = 420; 
+} 
+</script>
+
+<!-- 
+	 <noscript> 
+	tag defines an alternate content to be displayed to users 
+-->
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+<!-- 
+	Differences Between SVG and Canvas ????
+
+SVG is a language for describing 2D graphics in XML.
+Canvas draws 2D graphics, on the fly (with a JavaScript).
+
+SVG is XML based, which means that every element is available within the SVG DOM.
+You can attach JavaScript event handlers for an element.
+
+In SVG, each drawn shape is remembered as an object. If attributes of an SVG object are changed,
+the browser can automatically re-render the shape.
+
+Canvas is rendered pixel by pixel. In canvas, once the graphic is drawn, 
+it is forgotten by the browser. If its position should be changed, 
+the entire scene needs to be redrawn,including any objects that might have been covered by 
+the graphic.
+
+Canvas ==>
+Resolution dependent
+No support for event handlers
+Poor text rendering capabilities
+You can save the resulting image as .png or .jpg
+Well suited for graphic-intensive games
+
+SVG ==>
+Resolution independent
+Support for event handlers
+Best suited for applications with large rendering areas (Google Maps)
+Slow rendering if complex (anything that uses the DOM a lot will be slow)
+Not suited for game applications
+-->
+
+
+</body>
+</html>
